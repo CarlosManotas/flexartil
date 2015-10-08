@@ -1,0 +1,228 @@
+.contenedor--formulario--column{
+	width:100%;
+	background:#26558b ;
+	align-items: center;
+	padding:1em;
+	position: relative;
+
+	@include desde(web) {
+		position:absolute;
+		top:1.5em;
+		right: 15%;
+		max-width: 250px;
+		border-radius:15px;
+
+		h2{
+			font-size: 1.8em !important; 
+		}
+		h3{
+			font-size: 1em;
+			line-height: 1;
+		}
+		form{
+			width: 100% !important;
+		}
+		input{
+			line-height: 1.8 !important;
+			font-size: .9em;
+		}
+		input[type="submit"] {
+			line-height: 2 !important;
+			font-size: 1rem !important;
+		}
+	}
+
+	h2{
+		color:yellow;
+		text-shadow: 2px 2px 5px black;
+		margin:0;
+		font-size: 3em;
+		text-align: center;
+		span{
+			font-size: .5em;
+		}
+	}
+
+	.contenedor--formulario--info--row{
+		align-items:center;
+		justify-content: center;
+		h3{
+			width: 50%;
+			color:white;
+			font-weight: $light;
+			margin: 0; 
+			span{
+				font-weight: $bold;
+			}
+		}
+	}
+	form  {
+		width: 80%;
+		align-items:center;
+		justify-content: center;
+
+		.campo--row{
+			width: 100%;
+			margin: 1em 0;
+			input{
+				width: 100%;
+				border:none;
+				border-radius: 5px;
+				line-height: 2.5;
+				box-sizing: border-box;
+				padding: 0 1em;
+				box-shadow: 2px 2px 7px black;
+			}
+		}
+		input[type="submit"]{
+			width: 100%;
+			line-height: 2;
+			background: rgba(#33bd03,.8);
+			border:1px solid rgba(white,.5);
+			border-radius: 6px;
+			color: #26558b ;
+			font-weight: $bold;
+			font-size: 2rem;
+			box-sizing: border-box;
+			box-shadow: 2px 2px 5px black;
+		}
+	}
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; 
+}
+input[type=number] {
+	-moz-appearance:textfield;
+}
+
+input[disabled]{
+	background: #aaa !important;
+	position:relative;
+
+	&:after{
+		content: "" ;
+		position:absolute; 
+		background:red ;
+		color:yellow ;
+		width:30px ;
+		height:30px ;
+	}
+}
+
+/*
+*
+*
+*			ANGLUAR
+*
+*
+*/
+$color1 : #034ea2;
+input.ng-invalid.ng-dirty {
+	border: 2px solid #fa787e;
+	background-image: url(../img/error.png);
+	background-repeat: no-repeat;
+	background-position:95% 50%;
+	animation: mover .5s ease-in-out;
+}
+input.ng-valid.ng-dirty {
+	border: 2px solid #78fa89;
+	background-image: url(../img/correcto.png);
+	background-repeat: no-repeat;
+	background-position:95% 50%;
+	animation: mover2 .3s ease-in-out;
+}
+.inputError{
+	position:absolute;
+
+	ul{
+		
+		top: -2.3em;
+		left: -17em;
+	}
+}
+.inputError.diferente{
+	ul{
+		top: -5em;
+		left: 0;
+	}
+}
+.inputError,
+.inputError.diferente{
+	animation: campo .3s ease-in-out;
+	width:120%;
+	position:absolute;
+	ul{
+		position:absolute;
+		background: red;
+		border: 1px solid $color1;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items:center;
+		text-decoration: none;
+		padding:0;
+		border-radius:8px;
+		
+
+		li{
+			padding: .5em 1em;
+			list-style-type: none;
+			color:white;
+			font-size: .8em;
+		}
+	}
+	ul:after,ul:before{
+		position:absolute;
+		content:" ";
+		height: 0;
+		width: 0;
+		top: 100%;
+		left: 20%;
+		border: solid transparent;
+	}
+	ul:after{
+		border-color: rgba(250, 120, 126, 0);
+		border-top-color: red;
+		border-width: 5px;
+		margin-left: -5px;
+	}
+	ul:before{
+		border-color: rgba(250, 27, 27, 0);
+		border-top-color: $color1;
+		border-width: 8px;
+		margin-left: -8px;
+	}
+}
+
+
+
+@keyframes mover{
+	0%{
+		background-position:200% 50%;
+	}
+	100%{
+		background-position:95% 50%;
+	}
+}
+@keyframes mover2{
+	0%{
+		background-position:500% 50%;
+	}
+	100%{
+		background-position:95% 50%;
+	}
+}
+@keyframes campo{
+	0%{
+		transform: scale3d(.2,.2,1);
+	}
+	80%{
+		transform: scale3d(1.2,1.2,1);
+	}
+	100%{
+		transform: scale3d(1,1,1);
+	}
+}

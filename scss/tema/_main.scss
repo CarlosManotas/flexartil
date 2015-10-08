@@ -1,0 +1,281 @@
+$color1 : #034ea2;
+#main{
+	width: 100vw;
+	max-width: 1200px;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	display: flex;
+	flex-flow: column nowrap;
+	
+	section{
+		background:#e2e2e2;
+		width: 100%;
+		
+		@include desde(tablet) {
+			border-radius: 0 0 20px 20px;
+		}
+	}
+	
+	h2{
+		color: $color1;
+		text-align: center;
+		display: none;
+		@include desde(movil) {
+			display: block;
+		}
+	}
+	.items{
+		border-radius: 5px;
+		text-align: center;
+		color: white;
+		display:none;
+		line-height: 2;
+		padding: 0 .5em;
+		background: $color1;
+		box-shadow: 2px 2px 6px black;
+		margin-bottom: 2em;
+		font-size: .8em;
+		@include desde(movil) {
+			display: inline-block;
+		}
+		@include desde(tablet) {
+			width: 100px;
+			font-size: 1em;
+		}
+	}
+	.items:nth-child(even) {
+		background: #6c38ad;
+	}
+	img[alt="rodilla"] {
+		border-radius:15px;
+		width: 100%;
+	}
+	.vuelve{
+		flex-flow: column nowrap;
+		
+		figure[data="rodilla"] {
+			width: 100%;
+			padding:1em;
+			
+		}
+
+		div[data="textRodilla"] {
+			min-width: 100%;
+			padding:2em;
+			h3{
+				color:$color1;
+			}
+			p{
+				font-size: .8em;
+			}
+		}
+		@include desde(tablet) {
+			flex-flow: row nowrap;
+			margin: 1.5em;
+			figure[data="rodilla"] {
+				width: 100%;
+				padding:1em 5em .5em 0;
+			
+			}
+
+			div[data="textRodilla"] {
+				min-width: 60%;
+				width: 60%;
+				padding:0;
+			}
+		}
+	}
+	div[data="black"] {
+		background:black;
+		flex-direction: column;
+		padding: 1em;
+		background-image: url(../img/textura.jpg);
+		background-attachment: fixed;
+		background-position: 0% 0%;
+		margin-bottom: 2em;
+		.contenedor--flex--column--left{
+			h3{
+				color:#00b9f2;
+			}
+			p{
+				color:white;
+			}
+		}
+		.contenedor--flex--row--left{
+			figure{
+				padding:0;
+				margin:0; 
+				min-width: 164px;
+				z-index: 5;
+			}
+			.parrafo{
+				color:white;
+				text-align: left;
+				background:#00b9f2;
+				margin: 0;
+				justify-content: center;
+				align-items:center;
+				height: 100%;
+				align-self:center;
+				padding:1em 1em 1em 2em;
+				border-radius: 0 15px 15px 0;
+				position: relative;
+				left: -2.2em;
+			}
+		}
+		@include desde(tablet) {
+			margin: 1.5em;
+			margin-top: 2em;
+			flex-direction: row;
+			border-radius: 25px;
+			.contenedor--flex--column--left{
+				width: 50%;
+				padding: 0 4em;
+				text-align: justify;
+				p{
+					font-size: .8em;
+				}
+			}
+		}
+	}
+
+	.contenedor--flex--column--text{
+		width: 100%;
+		padding: 0 1.5em;
+		h3{
+			color:$color1;
+		}
+		p{
+			font-size: .8em;
+		}
+		ul{
+			list-style: none;
+			margin:0;
+			padding:0;
+			li{
+				font-size: .8em;
+				span{
+					color:green;
+				}
+			}
+		}
+
+		@include desde(tablet) {
+			max-width: 50%;
+			padding:0;
+		}
+	}
+	.contenedor--flex--codo{
+		width: 100%;
+		figure{
+			padding:0;
+			width: 100%;
+		}
+		@include desde(tablet) {
+			width: 40%;
+			figure{
+				padding:2em 0 2em 5em;
+				img{
+					border-radius:15px;
+				}
+			}
+		}
+	}
+	div[data="diferente"] {
+		position:relative;
+		top:-2.5em;
+		h2{
+			width: 50%;
+			color:white;
+			background-image:url(../img/texturaAzul.jpg);
+			margin: 0;
+			border-radius: 15px 15px 0 0;
+		}
+		div[data="rowGroup"] {
+			background-image:url(../img/texturaAzul.jpg);
+			margin: 0;
+			border-radius: 0 0 15px 15px;
+			padding:.5em;
+			background-attachment:fixed;
+			.saber{
+				color: white;
+				margin: 1em;
+				font-size: .8em;
+				width: 30%;
+				border-right: 1px solid white;
+				padding: 0 .2em;
+			}
+			.saber:first-letter{
+				font-size: 1.8em; 
+			}
+			.saber:last-child{
+				border-right:none;
+			}
+		}
+		@include desde(tablet) {
+			margin: 0;
+			padding:0;
+			top:0;
+			h2{
+				background:$color1;
+				background-image:none;
+				position:relative;
+				top: .5em;
+				width: 25%;
+				text-align: center;
+				margin: 0 0 .2em;
+				box-shadow: 4px 1px 6px rgba(black,.5);
+				border-radius:15px;
+			}
+			div[data="rowGroup"] {
+				box-shadow: 0 3px 4px black;
+				box-sizing: border-box;
+				.saber{
+					padding:1em 3em;
+					font-size: .75em;
+				}
+			}
+		}
+	}
+	.contenedor--flex--testimonios.vuelve{
+		margin: 0;
+		
+		div[data="testimonio"] {
+			overflow: hidden;
+			margin-top: 1.5em;
+
+			.testimonioImg{
+				width: 100%;
+				height: 250px;
+				background-image: url(../img/testimonio-mujer.jpg);
+				background-size: cover;
+				background-position: 0% center;
+			}
+			h2{
+				margin: .5em 0 0 0 ;
+				text-align: center;
+				font-size: 1.2em;
+			}
+			p{
+				margin: 1.5em;
+				font-size: .8em;
+			}
+		}
+		div[data="testimonio"]:last-child{
+			margin-right: 0;
+		}
+		@include desde(tablet) {
+			div[data="testimonio"] {
+				border-radius:15px;
+				border:2px solid $color1;
+				box-sizing:border-box;
+				margin-right: 5em;
+				box-shadow: 2px 2px 8px rgba(black,.5);
+			}
+		}
+	}
+		
+	
+}

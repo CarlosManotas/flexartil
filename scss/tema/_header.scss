@@ -1,0 +1,119 @@
+body{
+	overflow-x: hidden;
+}
+#header{
+	width:100vw;
+	position:relative;
+	.contenedor{
+		background-image: url(../img/header_movil2.jpg);
+		background-attachment: fixed;
+		background-size:contain;
+		height: 450px;
+		width: 100%;
+		background-repeat: no-repeat;
+		figure{
+			margin-top: auto;
+			order:5;
+			align-self:center;
+			margin-bottom: .5em;
+			margin-right:-7em;
+		}
+
+		@include desde(movil) {
+			background-size:cover;
+			height: 730px;
+			background-position: left 0%;
+			background-image: url(../img/header_movil.jpg);
+			h1{
+				font-size: 3rem !important;
+				margin-top: 0 !important;
+			}
+			figure{
+				order:-1;
+				align-self:flex-start;
+				margin:0;
+			}
+		}
+		@include desde(tablet) {
+			background-image: url(../img/header.jpg);
+			
+			
+		}
+		@include desde(web) {
+			height: 100vh;
+			background-image: url(../img/header2.jpg);
+			h1{
+				margin-top: 0 !important;
+			}
+		}
+		figure{
+			margin-left: 12%;
+			width: 150px;
+			img{
+				margin-top: 1em;
+			}
+		}
+		h1{
+			color: yellow;
+			position: relative;
+			font-size: 2rem;
+			text-shadow: 3px 3px 5px black;
+			margin-left: 1em;
+			margin-top: 1em;
+			span{
+				position:absolute;
+				top:1em;
+				left:1.7em;
+			}
+		}
+		&--column--parrafo{
+			align-self:center;
+			position:relative;
+			background: rgba(white,.5);
+			border-radius: 10px;
+			padding:1em;
+			width: 70%;
+			color: #034ea2;
+			margin-top: 18em;
+			box-sizing: border-box;
+			box-shadow: 2px 2px 5px black;
+			font-weight: $bold;
+			display: none;
+			@include desde(movil) {
+				display: block;
+			}
+		}
+	}
+}
+
+figure{
+	padding:0;
+	margin:0;
+}
+div[class^="contenedor"],
+section[class^="contenedor"] {
+	display:flex;
+}
+div[class*="between"] {
+	justify-content: space-between;
+}
+div[class*="row"] {
+	flex-flow: row nowrap;
+}
+form[class*="column"],
+section[class*="column"],
+div[class*="column"] {
+	flex-flow: column nowrap;
+}
+div[class*="around"] {
+	justify-content:space-around;
+}
+form[class*="centrado"],
+div[class*="centrado"],
+section[class*="centrado"],
+figure[class*="centrado"] {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	align-content:center;
+}

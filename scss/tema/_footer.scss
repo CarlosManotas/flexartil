@@ -1,0 +1,113 @@
+#footer{
+	margin-top:1.5em;
+	width: 100vw;
+	background-image:url(../img/diagmonds.png);
+	.contenedor--flex--footer--column{
+		width: 100%;
+		max-width: 1200px;
+		flex-flow: column nowrap;
+		h3{
+			color:white;
+			font-weight: $light;
+			text-align: center;
+			span{
+				color:#00b9f2;
+			}
+		}
+		h4{
+			color:#00b9f2;
+			text-align: center;
+		}
+		.contenedor--flex--column--formulario{
+
+			.contenedor--formulario--inputs--row.around{
+				width: 100%;
+				max-width: 1200px;
+				padding:0;
+				margin: 0;
+				flex-direction: column;
+				.input.centrado{
+					width: 100%;
+					position: relative;
+					input{
+						width: 90%;
+						border-radius: 5px;
+						line-height: 2.5;
+						box-sizing:border-box;
+						border: none;
+						padding: 0 0 0 .8em;
+						margin: 1em 0;
+					}
+				}
+				@include desde(tablet) {
+					flex-direction: row;
+				}
+			}
+			input[type="submit"] {
+				background: #33bd03;
+				border:none;
+				line-height: 2.5;
+				padding: 0 3em;
+				border-radius:5px;
+				color:white;
+				font-weight: $bold;
+			}
+		}		
+	}
+}
+.footer{
+	width:100vw;
+	background:black;
+	min-height:100px;
+	.contenedor--flex--footer.around{
+		width: 100%;
+		max-width: 1200px;
+		height: 60%;
+		flex-wrap: wrap;
+		.contenedor--items.between.row{
+			color: white;
+			justify-content: space-aroud;
+			align-items:center;
+			border-bottom: 1px solid white;
+			margin-left: .5em;
+			font-size: .9em;
+			font-weight: $bold;
+			padding-right: 2em;
+			margin-bottom: 1em;
+			figure{
+				margin-right: 1em;
+			}
+
+			@include desde(tablet) {
+				justify-content: flex-start;
+				border-right: 1px solid white;
+				margin-bottom: 0;
+				border-bottom:none;
+				.contenedor--items.between.row:last-child{
+					border:none;
+				}
+				.contenedor--items.between.row:first-child{
+					margin-left: 0;
+				}
+			}
+		}
+				
+	}
+}
+.contenedor--flex--footer--fin.centrado.column{
+	p{
+		font-size: .9em;
+		text-align: center;
+		margin: 0;
+	}
+	a{
+		margin: 0;
+		text-decoration: none;
+		p{
+			margin: 0;
+			font-size: .8em;
+			color:$color1;
+			margin-bottom: 1em;
+		}
+	}
+}

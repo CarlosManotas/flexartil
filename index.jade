@@ -1,0 +1,142 @@
+doctype html
+html(lang="es")
+	head
+		title 
+		meta(charset="utf-8")
+		meta(name="viewport",content="width=device-width,initial-scale=1,maximun-scale=1")
+		link(rel="stylesheet", href="css/estilos.css")
+	
+	body(ng-app)
+		header#header
+			.contenedor.column
+				figure
+					img(src="img/Logo.svg", alt="logo")
+				h1 MEJORÁ TU
+					span CALIDAD DE VIDA
+				.contenedor--column--parrafo
+					p FlexArtil es el único suplemento que combina glucosamina potásica, colágeno y ácido hialurónico, ayudando al buen funcionamiento de las articulaciones y complementando tu alimentación diaria con el fin de evitar lesiones y aliviar malestares articulares. 
+			.contenedor--formulario--column
+				h2
+					span (011)
+					| 5275-7634
+				.contenedor--formulario--info--row
+					figure
+						img(src="img/Reloj.png", alt="atencion")
+					h3
+						span LLAMÁ HOY 
+						| Y LLEVATE UNO GRATIS CON TU PEDIDO
+				form.contenedor--column(action="form.php")
+					.campo--row.nombre
+						input(type="text", placeholder="Nombre y Apellido",required)
+					.campo--row.email
+						input(type="email", placeholder="Email", required)
+					.campo--row.cod
+						input(type="number", placeholder="Código de Área", required)
+					.campo--row.telefono
+						input(type="number", placeholder="Teléfono", required)
+					input(type="submit",value="ENVIAR", required)
+		main#main
+			section.contenedor--flex--column
+				h2 RECOMENDADO PARA COMPLICACIONES EN:
+				.contenedor--flex--row.around
+					.items RODILLAS
+					.items CODOS
+					.items TOBILLOS
+					.items HOMBROS
+					.items MUÑECAS
+					.items DEDOS
+				.contenedor--flex--between.vuelve
+					figure(data="rodilla")
+						img(src="img/Rodilla.jpg", alt="rodilla")
+					.column(data="textRodilla")
+						h3 ¿Por qué FLEXARTIL es tan efectivo?
+						p Si tenés más de 45 años y te rompiste algún hueso o experimentás dolencias habituales en rodillas, codos, tobillos, hombros, muñecas o dedos, posiblemente tu alimentación diaria no te esté aportando los nutrientes básicos necesarios, lo que te provoca una carencia nutricional que desgasta tus articulaciones. No te preocupes: en general, la mayoría de las personas mayores a 50 años sufren de esta problemática y no encuentran la salida en los analgésicos, que sólo alivian la molestia temporalmente.<br><br>FLEXARTIL es el único complejo vitamínico que combina la glucosamina, el colágeno y el ácido hialurónico que, con la dosis adecuada, ayuda a acelerar la regeneración de las articulaciones dañadas.
+				.contenedor--flex--between(data="black")
+					.contenedor--flex--column--left
+						h3 El secreto de FLEXARTIL<br>se encuentra en sus componentes:
+						p El secreto del plan de acción que brinda nuestro producto proviene de la dosis adecuada de tres componentes nunca antes combinados, que lo transforman en una potente fórmula para cubrir las deficiencias nutricionales que afectan a las articulaciones, ayudando a nutrir los cartílagos, y colaborando en la mejora y mantención de la salud del sistema articular.<br>Nuestro producto es el único en Argentina que combina estos potentes componentes para el cartílago y las articulaciones, que son la glucosamina, el colágeno y el ácido hialurónico. Numerosos estudios científicos* han demostrado la efectividad de la glucosamina sobre la mejoría en el desgaste del cartílago, mientras que el ácido hialurónico ha sido aprobado por importantes instituciones farmacológicas internacionales como EMEA y FDA, como tratamiento para los malestares en la rodilla.<br>*Según estudio realizado por McAlindon et al. (2000), el efecto de la glucosamina para el tratamiento de la osteoartritis de la cadera y la rodilla resultó beneficioso.
+						.contenedor--flex--row--left
+							figure
+								img(src="img/Rodilla.png", alt="rodillaPng")
+							.contenedor.parrafo
+								| MEJORAR TU CALIDAD DE VIDA PARA UNA VEJEZ SANA Y ACTIVA, DEPENDE DE TÍ.
+					.contenedor--flex--right.centrado
+						figure.centrado
+							img(src="img/Pack.png", alt="pack")
+				.contenedor--flex--between.vuelve
+					.contenedor--flex--column--text
+						h3 ¿Cómo funciona FLEXARTIL?
+						p FlexArtil es un suplemento con efectos acumulativos visibles con la constancia en la que se consuma el producto. A partir de su uso, existirá la posibilidad de notar diferencias en el caminar o inclusive al estar reposados.
+						h3 Beneficios inmediatos
+						ul
+							li
+								span.icon-aceptar.espacio 
+								|Colabora en la reducción de los malestares en las articulaciones como rodilla, codo, cadera.
+							li
+								span.icon-aceptar.espacio 
+								|Posibilita prescindir de la sensación de pesadez y cansancio.
+							li
+								span.icon-aceptar.espacio 
+								|Ayuda a recobrar el movimiento de las articulaciones.
+							li
+								span.icon-aceptar.espacio 
+								|Ayuda a prevenir el desgaste articular.
+					.contenedor--flex--codo
+						figure
+							img(src="img/Codo.jpg", alt="codo")
+				.contenedor--flex--column.centrado(data="diferente")
+					h2 SABIAS QUE	
+					.contenedor--flex--row.around(data="rowGroup")
+						.saber 1. La glucosamina es un componente que, servido como suplemento dietético, sirve para la reconstrucción de los cartílagos.
+						.saber 2. El ácido hialurónico se emplea en el aumento de volumen de los tejidos y como suplemento nutricional para las articulaciones en tratamientos por molestias en las mismas.
+						.saber	3. Es muy sencillo seguir el procedimiento: basta con tomar dos comprimidos diarios, repartidos entre el desayuno y la cena. Llame YA y empiece a notar las diferencias.		
+			.contenedor--flex--testimonios.vuelve
+				.contenedor--column--testimonio(data="testimonio")
+					.testimonioImg
+					h2 María S. (Ama de casa, 61 años),<br>Capital Federal.
+					p “Tenía molestias en las rodillas, muñecas y constantemente temía caerme en la calle y quebrarme. Soy ama de casa y realizaba mis tareas diarias por la mitad, debido al malestar físico y el miedo a lesionarme. Los analgésicos aliviaban las dolencias sólo durante un corto período de tiempo y empecé a creer que no había nada que las calmara. Fue entonces que mi hija, leyendo una revista, encontró este producto. Ya no tenía nada que perder, así que me animé a probarlo. Desde que tomo FlexArtil mi vida ha vuelto a ser la de antes. Puedo realizar mis actividades con normalidad y el dolor ha cesado. ¡Me arrepiento de no haberlo probado antes!”.
+				.contenedor--column--testimonio(data="testimonio")
+					.testimonioImg(style="background-image: url(../img/testimonio-hombre.jpg);background-size: 120%")
+					h2 Fernando G. (Jugador de Fútbol, 38 años),<br> Capital Federal.
+					p “Toda mi vida jugué al fútbol, por lo que estuve expuesto a infinidad de lesiones. Hace unos años, mis tobillos empezaron a doler de tal forman que jugar a la pelota se convirtió en la actividad prohibida para mí. Probé infinidad de medicamentos y pasé por varios tratamientos, pero la molestia no sólo no paró, sino que se incrementó. La solución llegó a través de un amigo, que al ver la publicidad de FlexArtil en una revista, pensó en mí, en mis malestares y en las ganas que tenía de volver a jugar al fútbol, y me pasó el dato. Hace un tiempo que tomo FlexArtil y no sólo volví a practicar mi deporte favorito, sino que también me siento más cómodo con mi cuerpo. FlexArtil me devolvió la vida que creía perdida”.
+		footer#footer
+			.contenedor--flex--footer--column.centrar
+				h3	LLAMÁ HOY Y LLEVATE UNO GRATIS CON TU PEDIDO   /  
+					span   (011) 5275-7634   
+					| /   ATENCIÓN DE 7 A 23 HS	
+				.contenedor--flex--column--formulario
+					form(action="form.php", style="width:100%").centrado.column
+						.contenedor--formulario--inputs--row.around
+							.input.centrado
+								input(type="text",required,placeholder="Nombre y Apellido")
+							.input.centrado
+								input(type="text",required,placeholder="Email")
+							.input.centrado
+								input(type="number",required,placeholder="Código de Área")
+							.input.centrado
+								input(type="number",required,placeholder="Teléfono")
+						input(type="submit", value="ENVIAR")
+				h4 ¡Vivir dignamente depende de uno mismo! FlexArtil, el suplemento que te devolverá el control de tu vida.
+		.footer.centrado
+			.contenedor--flex--footer.around
+				.contenedor--items.between.row
+					figure
+						img(src="img/Telefonista.png", alt="")
+					p (011) XXXX-XXXX<br> Conseguilo exclusivamente<br>por venta telefónica.
+				.contenedor--items.between.row
+					figure
+						img(src="img/Relojfooter.png", alt="")
+					p Atención<br>de 7 a 23 hs.
+				.contenedor--items.between.row
+					figure
+						img(src="img/Camioneta.png", alt="")
+					p Envíos a domicilio<br> en todo el país.
+				.contenedor--items.between.row
+					figure
+						img(src="img/Tarjeta.png", alt="")
+					p Aceptamos<br>todas las tarjetas.
+		.contenedor--flex--footer--fin.centrado
+			p Las imágenes fueron retocadas y/o modificadas digitalmente. // Los resultados pueden variar de persona en persona.
+		script(src="http://code.jquery.com/jquery-1.11.2.min.js")
+		script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js")
+		script(src="js/scripts.js")
